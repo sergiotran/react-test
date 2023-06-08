@@ -1,0 +1,43 @@
+.header {
+  @apply fixed h-16 left-0 top-0 w-full bg-white border-b-2 border-gray-100 flex items-center justify-between lg:px-4 px-3 z-50;
+
+  &__brand {
+    @apply flex h-full items-center gap-3;
+
+    &__name {
+      @apply font-bold text-xl;
+    }
+  }
+
+  &__utillity {
+    @apply flex flex-row items-center;
+
+    &__btns {
+      @apply flex flex-row gap-3;
+    }
+  }
+
+  &__user {
+    @apply flex flex-row items-center gap-3 text-gray-400;
+
+    &__content {
+      @apply flex flex-row items-center gap-2;
+
+      img {
+        @apply rounded-full bg-slate-500;
+      }
+    }
+
+    &__icon {
+      @apply w-5;
+    }
+
+    &__name {
+      @apply font-bold text-gray-700 ml-1;
+    }
+  }
+
+  &-burger-icon {
+    @apply w-6 h-full py-4 cursor-pointer fill-gray-700;
+  }
+}
