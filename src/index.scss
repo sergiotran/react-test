@@ -3,10 +3,23 @@
 @tailwind utilities;
 @tailwind variants;
 
-html, body {
-  @apply h-full;
+html,
+body {
+	@apply h-full;
 }
 
 body {
-  @apply pt-16 text-gray-700;
+	@apply pt-16 text-gray-700;
+}
+
+*::-webkit-scrollbar-track {
+	@apply shadow-sm bg-white rounded-[10px] ;
+}
+
+*::-webkit-scrollbar {
+	@apply bg-white w-[5px];
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply bg-gray-300 rounded-[10px] opacity-0;
 }

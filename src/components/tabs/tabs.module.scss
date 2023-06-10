@@ -1,0 +1,8 @@
+.tab__items {
+  @apply flex flex-row relative;
+
+  &::after {
+    content: '';
+    @apply absolute bottom-0 h-[2px] w-full bg-gray-200;
+  }
+}

@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./intake-note.module.scss";
 import IconButton from "@/components/icon-button";
-import Button from "../button";
 import { BiSearch, BiCircle } from "react-icons/bi";
 import { FiSettings } from "react-icons/fi";
 import { AiOutlineEye, AiFillCheckCircle } from "react-icons/ai";
 import Tabs from "@/components/tabs";
+import Button from "@/components/button";
 
 const MOCK_DATA = [
 	{
@@ -23,6 +23,26 @@ const MOCK_DATA = [
 	{
 		title: "History of Present IIIess",
 		status: "incomplete",
+	},
+	{
+		title: "Stressors",
+		status: "completed",
+	},
+	{
+		title: "Review of systems",
+		status: "completed",
+	},
+	{
+		title: "Subtance Abuse History",
+		status: "completed",
+	},
+	{
+		title: "Subtance Use Consequences",
+		status: "incomplete",
+	},
+	{
+		title: "Inpatient Psychiatric History",
+		status: "completed",
 	},
 ];
 
@@ -76,14 +96,15 @@ const IntakeNote = () => {
 						</IconButton>
 					</div>
 				</div>
-				<Button
-					variant="primary"
-					className="w-full font-light flex flex-row items-center justify-center gap-2 text-sm 2xl:text-base"
-				>
+				<Button variant="primary" className={styles.preview__btn}>
 					<AiOutlineEye className="w-[20px] h-[20px]" /> Preview note
 				</Button>
 			</div>
-			<Tabs className="flex-1" tabs={tabs}>
+			<Tabs
+				className="flex-1 flex flex-row overflow-auto"
+				activeClassName="!font-bold"
+				tabs={tabs}
+			>
 				{(data) => (
 					<div className="flex flex-col flex-1 h-full max-h-full overflow-auto">
 						{data.map((item, index) => {
@@ -108,7 +129,7 @@ const NoteItem = ({ title, status }) => {
 	}, [status]);
 
 	return (
-		<Button className="text-left hover:bg-gray-100 flex flex-row items-center gap-2 !px-2 !py-3 transition">
+		<Button className={styles.intake__note__item}>
 			{statusIcon} {title}
 		</Button>
 	);

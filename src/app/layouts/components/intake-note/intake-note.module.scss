@@ -1,0 +1,24 @@
+.intake__note {
+	@apply relative lg:px-4 px-3 w-80 py-3 border-r-2 border-gray-100 flex flex-col gap-2 flex-none h-full;
+
+	&__title {
+		@apply font-bold text-lg;
+	}
+
+	&__header {
+		@apply flex flex-row items-center justify-between mb-3;
+	}
+
+	&__btns {
+		@apply flex flex-row gap-2;
+	}
+
+	&__item {
+		@apply px-2 py-3 #{!important};
+		@apply text-left hover:bg-gray-100 flex flex-row items-center gap-2 transition;
+	};
+}
+
+.preview__btn {
+	@apply w-full font-light flex flex-row items-center justify-center gap-2 text-sm 2xl:text-base;
+}

@@ -1,0 +1,4 @@
+.patient__detail {
+	@apply relative max-w-full xl:w-80 2xl:w-96 border-l-2 border-gray-100 flex flex-col gap-2 flex-none h-full;
+	@apply hidden md:flex;
+}

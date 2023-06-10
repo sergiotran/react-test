@@ -3,7 +3,7 @@ import { BsChevronDown } from "react-icons/bs";
 import styles from "./header.module.scss";
 import IconButton from "@/components/icon-button";
 import Button from "@/components/button";
-import { NAMES } from "@/constants/data";
+import { NAMES } from "@/app/constants/data";
 
 const AVATAR_SIZE = 30;
 
